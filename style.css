@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+/* header */
+
+nav{
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.8rem 1.8rem 1.8rem 6rem;
+}
+
+.extra{
+    display: none;
+}
+
+.logo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img{
+    width: 14rem;
+}
+
+.nav-menu{
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+.nav-menu li{
+    list-style: none;
+}
+
+.nav-menu li a,.shop-ham a, .ham-li a{
+    text-decoration: none;
+    color: white;
+    font-size: .9rem;
+    font-weight: bold;
+}
+
+.nav-menu li a:hover,.shop-ham a:hover{
+    text-decoration: underline;
+}
+
+.shop-ham{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.hamburger{
+    cursor: pointer;
+}
+
+.bar{
+    width: 1.1rem;
+    height: .1rem;
+    background-color: white;
+    margin: .1rem 0;
+}
+
+.hamburger.active .bar:nth-child(2){
+    opacity: 0;
+}
+.hamburger.active .bar:nth-child(1){
+    transform: translateY(.2rem) rotate(45deg);
+}
+.hamburger.active .bar:nth-child(3){
+    transform: translateY(-.2rem) rotate(-45deg);
+}
+
+.ham-li{
+    display: none;
+}
+
+.ham-li.active{
+    display: block;
+    position: fixed;
+    right: 1.8rem;
+    top: 4.5rem;
+    transition: 2s ease-in-out;
+}
+
+.ham-li li{
+    padding: 1rem 0 1rem 10rem;
+    text-align: end;
+    border-bottom: 0.01rem solid rgb(55, 55, 43);
+    list-style: none;
+}
+
+.after{
+    display: none;
+}
+
+.none{
+    display: none;
+}
+/* ====== */
+
+/* starlink mission */
+
+.starlink-mission{
+    height: 40rem;
+    width: 100%;
+    background-image: url('/assets/starlink\ \(1\).webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.f2-mission{
+    height: 40rem;
+    width: 100%;
+    background-image: url('/assets/20230109f9oneweblaunch.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.starship-update{
+    height: 40rem;
+    width: 100%;
+    background-image: url('/assets/starship-feb2022.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.nasa{
+    height: 40rem;
+    width: 100%;
+    background-image: url('/assets/spacex_starship_hls_artemis_iii_2_crew_0.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.content{
+    position: relative;
+    width: max-content;
+    left: 8%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    font-size: 1.3rem;
+}
+
+.content-1{
+    top: 25rem;
+}
+
+.content-2{
+    top: 25rem;
+}
+
+.content-3{
+    top: 30rem;
+}
+
+.content-4{
+    top: 20rem;
+    width: 25%;
+}
+
+.watch{
+    padding: 1rem 2rem;
+    width: 10rem;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    font-weight: bolder;
+}
+
+.watch:hover{
+    color: black;
+    background-color: white;
+    cursor: pointer;
+}
+
+/* ======= */
+
+/* footer */
+
+footer{
+    display: flex;
+    padding: 2.5rem 5rem;
+    background-color: black;
+    justify-content: center;
+    font-size: .9rem;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.footer-menu{
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.footer-link{
+    font-size: .7rem;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.footer-link:hover{
+    color: rgb(126, 126, 126);
+}
+
+#cp{
+    color: rgb(126, 126, 126);
+}
+
+/* media queries */
+@media(max-width:1270px){
+    /* header */
+    .nav-menu{
+        display: none;
+    }
+    #shop{
+        display: none;
+    }
+    .extra{
+        display: block;
+    }
+    .content{
+        font-size: 1rem;
+    }
+    .after{
+        display: block;
+    }
+    .ham-li li{
+        padding: .8rem 0 .8rem 10rem;
+    }
+}
+
+@media(max-width:1100px){
+    .content-4{
+        width: 30%;
+    }
+}
+
+@media(max-width:900px){
+    .content-4{
+        width: 50%;
+    }
+}
+@media(max-width:600px){
+    .content-4{
+        width: 60%;
+    }
+}
+@media(max-width:400px){
+    .content-4{
+        width: 80%;
+    }
+}
+
+
